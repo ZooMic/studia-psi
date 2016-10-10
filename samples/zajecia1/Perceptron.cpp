@@ -54,7 +54,7 @@ void Perceptron::losowanieWag() {
     for(int i = 0; i < n; i++) {
         wektorWag[i] = ((double)rand()) / (RAND_MAX);
     }
-    wektorWag[n] = 1.0;
+    wektorWag[n] = 0.0;
     cout << "Losowy wektorWag: [ ";
     for(int i = 0; i <= n; i++) {
         cout << wektorWag[i];
@@ -91,10 +91,10 @@ void Perceptron::odpowiedz(double pytanie) {
     cout << "Wartość " << pytanie << " należy do klasy o wartości " << sumaDyskretna << endl;
 }
 
-void Perceptron::odpowiedz2(double p1, double p2) {
+double Perceptron::odpowiedz2(double p1, double p2) {
     // Ustawianie wejscia
     wektorWejsc[0] = p1;
     wektorWejsc[1] = p2;
     wynikDyskretny();
-    cout << "Wartość " << p1 << " , " << p2 << " należy do klasy o wartości " << sumaDyskretna << endl;
+    return sumaDyskretna;
 }

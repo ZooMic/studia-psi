@@ -11,7 +11,7 @@ public:
     double bladPrzyblizenia;
     void trenujNeutron(double**ciagUczacy, int size);
     void odpowiedz(double pytanie);
-    void odpowiedz2(double p1, double p2);
+    double odpowiedz2(double p1, double p2);
     Perceptron(int liczbaWejsc);
 private:
     int licznikCiagu;
